@@ -1,0 +1,235 @@
+body {
+    background-color: #262626;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+    #header--logo {
+        margin: 24px;
+    }
+    #header--name-area {
+        margin: 24px;
+    }
+    #header--logo {
+        margin: 24px;
+    }
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    text-color: #262626;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+    display: flex;
+}
+
+#header--logo {
+    width: 100px;
+    height: auto;
+    transition: all .1s ease-out;
+}
+
+#header--logo:hover {
+    transform: scale(1.1);
+    height: auto;
+}
+
+#header--name-area {
+    display: flex;
+    flex-direction: column;
+}
+
+#header--name-area--upper {
+    display: flex;
+    align-items: center;
+}
+
+#header--primary {
+    font-family: Arial;
+    font-size: 18px;
+    text-align: center;
+}
+
+#header--secondary {
+    font-family: Arial;
+    font-size: 14px;
+    text-align: center;
+    margin: auto;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+#header--compass {
+    font-size: 24px;
+    text-align: center;
+    margin: 6px;
+    animation: rotate 3s infinite linear;
+}
+
+#header--login {
+    font-family: Arial;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    border-color: #e6e6e6;
+    margin: 24px;
+}
+
+.float {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0077ff;
+}
+
+.text-effect {
+    position: relative;
+}
+
+.text-effect float {
+    position: absolute;
+    top: calc(50% - 7px);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.text-effect input:not(:placeholder-shown) {
+    padding: 28px 0px 12px 0px;
+}
+
+.text-effect input:not(:placeholder-shown)+float {
+    transform: translateY(-10px);
+    opacity: .7;
+}
+
+.field-icon {
+    float: right;
+    margin-top: -25px;
+    margin-right: 5px;
+    border: 0;
+}
+
+.flex-box__outer {
+    flex: 1;
+    align-items: center;
+    display: flex;
+}
+
+.flex-box__inner {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    background-color: #fafafa
+}
+
+
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+
+/**
+* Add a transition to the label and input.
+* I'm not even sure that touch-action: manipulation works on
+* inputs, but hey, it's new and cool and could remove the 
+* pesky delay.
+*/
+
+label,
+input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+input {
+    font-size: 1.5em;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+/**
+* Translate down and scale the label up to cover the placeholder,
+* when following an input (with placeholder-shown support).
+* Also make sure the label is only on one row, at max 2/3rds of the
+* field—to make sure it scales properly and doesn't wrap.
+*/
+
+input:placeholder-shown+label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+}
+
+
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+
+/**
+* Show the placeholder when the input is focused.
+*/
+
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+}
