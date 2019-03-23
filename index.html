@@ -34,24 +34,38 @@
 </head>
 
 <body>
+
+    <!-- Header Section -->
     <header>
+
+        <!-- 1st Flex Box Item -->
         <div class="flex-box__outer"></div>
+
+        <!-- 2nd Flex Box Item -->
         <div class="flex-box__inner">
+
+            <!-- The Logo -->
             <img id="header--logo" src="./assets/logo.png" alt="Heritage GO Logo" />
+            
+            <!-- The Name Area -->
             <div id="header--name-area">
+
                 <div id="header--name-area--upper">
                     <h1 id="header--primary">Ho Chi Minh</h1>
                     <span class="far fa-compass" id="header--compass"></span>
                 </div>
+
                 <h2 id="header--secondary">Vietnam</h2>
             </div>
         </div>
+
+        <!-- 3rd Flex Box Item -->
         <div class="flex-box__outer">
 
             <!-- Button trigger modal -->
             <button type="button" id="header--login" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</button>
 
-            <!-- Modal -->
+            <!-- Bootstrap Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -59,6 +73,8 @@
                             <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
+
+                        <!-- The Form -->
                         <div class="modal-body">
                             <form>
                                 <div class="form-group text-effect">
@@ -72,16 +88,20 @@
                                 </div>
                             </form>
                         </div>
+
+                        <!-- The Footer with Submit button -->
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary btn-block">Log in</button>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
+
+    <!-- Main section -->
     <main>
+
         <form action="">
             <div class="field">
                 <input type="text" name="fullname" id="fullname" placeholder="Jane Appleseed">
@@ -101,7 +121,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Include API data -->
-    <script src="./js/heritagego-service.1.0.0.js"></script>
+    <script src="./assets/script/heritagego-service.1.0.0.js"></script>
 </body>
 
 </html>
