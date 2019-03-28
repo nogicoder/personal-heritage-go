@@ -1,5 +1,5 @@
 body {
-    background-color: #262626;
+    color: #262626;
     margin: 0;
     padding: 0;
 }
@@ -22,29 +22,27 @@ body {
 header {
     height: 80px;
     width: 100%;
-    background-color: white;
-    text-color: #262626;
     border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
     display: flex;
 }
 
-#header--logo {
+#header__logo {
     width: 100px;
     height: auto;
     transition: all .1s ease-out;
 }
 
-#header--logo:hover {
+#header__logo:hover {
     transform: scale(1.1);
     height: auto;
 }
 
-#header--name-area {
+#header__name-area {
     display: flex;
     flex-direction: column;
 }
 
-#header--name-area--upper {
+#header__name-area__upper {
     display: flex;
     align-items: center;
 }
