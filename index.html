@@ -67,23 +67,26 @@
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
+
+                        <!-- The Modal Header with Title -->
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
 
-                        <!-- The Form -->
-                        <form>
-                            <div class="field">
-                                <input type="text" name="fullname" id="fullname" placeholder="Jane Appleseed">
-                                <label for="fullname">Name</label>
-                            </div>
-
-                            <div class="field">
-                                <input type="password" name="email" id="email" placeholder="jane.appleseed@example.com">
-                                <label for="email">Email</label>
-                            </div>
-                        </form>
+                        <!-- The Modal Body with Form -->
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" id="email" class="form-group__field" required>
+                                    <label class="form-group__placeholder" for="email">Email Adress</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="password" class="form-group__field" required>
+                                    <label class="form-group__placeholder" for="password">Password</label>
+                                </div>
+                            </form>
+                        </div>
 
                         <!-- The Footer with Submit button -->
                         <div class="modal-footer">
@@ -97,7 +100,6 @@
 
     <!-- Main section -->
     <main>
-
 
     </main>
 
