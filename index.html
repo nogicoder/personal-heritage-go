@@ -78,12 +78,13 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <input type="text" id="email" class="form-group__field" required>
-                                    <label class="form-group__placeholder" for="email">Email Adress</label>
+                                    <input type="text" id="form-group__email" class="form-group__field" required>
+                                    <label class="form-group__placeholder" for="form-group__email">Email Adress</label>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" id="password" class="form-group__field" required>
-                                    <label class="form-group__placeholder" for="password">Password</label>
+                                    <input type="password" id="form-group__password" class="form-group__field" required>
+                                    <label class="form-group__placeholder" for="form-group__password">Password</label>
+                                    <button type="button" class="fas fa-lock" id="form-group__lock" onclick="show()"></button>
                                 </div>
                             </form>
                         </div>
@@ -110,6 +111,9 @@
 
     <!-- Include API data -->
     <script src="./assets/script/heritagego-service.1.0.0.js"></script>
+
+    <!-- Include JS script -->
+    <script src="./assets/script/showpassword.js"></script>
 </body>
 
 </html>
