@@ -1,9 +1,3 @@
-body {
-    color: #262626;
-    margin: 0;
-    padding: 0;
-}
-
 @media (max-width: 600px) {
     body {
         width: 100%;
@@ -19,6 +13,12 @@ body {
     }
 }
 
+body {
+    color: #262626;
+    margin: 0;
+    padding: 0;
+}
+
 header {
     height: 80px;
     width: 100%;
@@ -26,38 +26,52 @@ header {
     display: flex;
 }
 
-#header__logo {
+.header__outer {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__inner {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header__inner__logo {
     width: 100px;
     height: auto;
     transition: all .1s ease-out;
 }
 
-#header__logo:hover {
+#header__inner__logo:hover {
     transform: scale(1.1);
-    height: auto;
 }
 
-#header__name-area {
+#header__inner__name-area {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#header__inner__name-area__left {
     display: flex;
     flex-direction: column;
-}
-
-#header__name-area__upper {
-    display: flex;
     align-items: center;
 }
 
-#header--primary {
+#header__inner__name-area__left__primary {
     font-family: Arial;
     font-size: 18px;
     text-align: center;
 }
 
-#header--secondary {
+#header__inner__name-area__left__secondary {
     font-family: Arial;
     font-size: 14px;
     text-align: center;
-    margin: auto;
 }
 
 @keyframes rotate {
@@ -69,70 +83,20 @@ header {
     }
 }
 
-#header--compass {
+#header__inner__name-area__compass {
     font-size: 24px;
     text-align: center;
     margin: 6px;
-    animation: rotate 3s infinite linear;
+    animation: rotate 0.3s infinite linear;
 }
 
-#header--login {
+#header__outer__login {
     font-family: Arial;
     font-size: 14px;
     text-align: center;
     border-radius: 3px;
     border-color: #e6e6e6;
     margin: 24px;
-}
-
-.float {
-    font-size: 14px;
-    font-weight: bold;
-    color: #0077ff;
-}
-
-.text-effect {
-    position: relative;
-}
-
-.text-effect float {
-    position: absolute;
-    top: calc(50% - 7px);
-    opacity: 0;
-    transition: all .3s ease;
-}
-
-.text-effect input:not(:placeholder-shown) {
-    padding: 28px 0px 12px 0px;
-}
-
-.text-effect input:not(:placeholder-shown)+float {
-    transform: translateY(-10px);
-    opacity: .7;
-}
-
-.field-icon {
-    float: right;
-    margin-top: -25px;
-    margin-right: 5px;
-    border: 0;
-}
-
-.flex-box__outer {
-    flex: 1;
-    align-items: center;
-    display: flex;
-}
-
-.flex-box__inner {
-    width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-main {
-    background-color: #fafafa
 }
 
 
