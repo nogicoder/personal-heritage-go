@@ -132,3 +132,20 @@ header {
     transform: translate3d(0, -100%, 0);
     color: rgb(4, 91, 230);
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+.main__post-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+}
+
+.main__post-layout__post {
+    display: grid;
+}
