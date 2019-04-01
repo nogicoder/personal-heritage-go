@@ -136,7 +136,7 @@ header {
 main {
     display: flex;
     justify-content: center;
-    background-color: red;
+    background-color: black;
 }
 
 .main__post-layout {
@@ -147,5 +147,38 @@ main {
 }
 
 .main__post-layout__post {
+    background-color: rgb(22, 111, 212);
+    height: 600px;
     display: grid;
+    grid-template-rows: 2fr 8fr 1fr 2fr;
+    grid-gap: 1em;
+}
+
+.main__post-layout__post__header {
+    background-color: aqua;
+    display: grid;
+    grid-template-column: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main__post-layout__post__header_avatar {
+    background-color: green;
+    grid-column: 1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.main__post-layout__post__img {
+    background-color: red;
+}
+
+.main__post-layout__post__footer {
+    background-color: beige;
+}
+
+.main__post-layout__post__comment {
+    background-color: purple;
 }
