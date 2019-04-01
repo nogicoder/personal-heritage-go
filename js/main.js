@@ -25,6 +25,16 @@ $(document).ready(
                                 );
                             };
                             content.find(".main-img").prop("src", "https:" + photo.image_url + "?size=large");
+                            if (photo.like_count) {
+                                content.find("#like").html(photo.like_count);
+                            } else {
+                                content.find("#like").html("0");
+                            };
+                            if (photo.comment_count) {
+                                content.find("#comment").html(photo.comment_count);
+                            } else {
+                                content.find("#comment").html("0");
+                            };
                         })
                         .catch(error => {
                             console.log(error)
