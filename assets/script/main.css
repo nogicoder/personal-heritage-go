@@ -11,9 +11,6 @@
     #header--logo {
         margin: 24px;
     }
-    .main__post-layout {
-        width: 100%;
-    }
 }
 
 body {
@@ -137,24 +134,27 @@ header {
 }
 
 main {
-    display: grid;
-    grid-template-columns: auto 600px auto;
+    display: flex;
+    align-content: stretch;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .main__post-layout {
+    grid-column: 2/3;
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    grid-column: 2/3;
 }
 
 .main__post-layout__post {
-    grid-column: 2/3;
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(0, auto));
     grid-gap: 0.5em;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .main__post-layout__post:first-child {
@@ -236,43 +236,34 @@ img {
 
 .main__post-layout__post__img {
     text-align: center;
-    width: 600px;
-    height: 100%;
+    max-width: 600px;
+    max-height: 100%;
 }
 
 .main__post-layout__post__footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 5fr;
-    margin: 0em 2em auto -2em;
+    grid-template-columns: 1fr 1fr 1fr 5fr;
     padding-right: 0.2em;
     position: relative;
+    margin: auto 1em auto 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 #footer-1 {
-    grid-column: 2/3
+    grid-column: 1/2;
 }
 
 #footer-4 {
+    grid-column: 4/5;
     text-align: right;
     padding-right: 0.3em;
-}
-
-.main__post-layout__post__footer:after {
-    background-color: rgba(0, 0, 0, 0.3);
-    bottom: 0;
-    content: '';
-    display: block;
-    margin-bottom: -0.5em;
-    height: 1px;
-    left: 50%;
-    position: absolute;
-    transform: translate(-45%, 0);
-    width: 550px;
+    margin-right: 2em;
+    padding-bottom: 0.5em;
 }
 
 .main__post-layout__post__comment {
-    margin: 1em 0.8em 0.8em 0.8em;
-    padding: 1em;
+    margin: 0.5em 0.8em 0.8em 0.8em;
+    padding: 0.6em;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 25px;
     text-align: left;
