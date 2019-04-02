@@ -24,6 +24,19 @@ header {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
     display: flex;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 99;
+    overflow: hidden;
+    &::after {
+        background: rgba(white, .5);
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        z-index: 4;
+    }
 }
 
 .header__outer {
@@ -86,7 +99,7 @@ header {
 #header__inner__name-area__compass {
     font-size: 24px;
     text-align: center;
-    margin: 6px;
+    margin-left: 6px;
     animation: rotate 0.3s infinite linear;
 }
 
@@ -146,6 +159,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
 .main__post-layout__post {

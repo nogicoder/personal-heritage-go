@@ -1,5 +1,19 @@
+// Show password
+function show() {
+    var x = document.getElementById("form-group__password");
+    y = document.getElementById("form-group__lock");
+    if (x.type === "password") {
+        x.type = "text";
+        y.className = "fas fa-lock-open";
+    } else {
+        x.type = "password";
+        y.className = "fas fa-lock";
+    }
+}
+
 let defaultContent = $(".main__post-layout__post");
 
+// Fetching photos
 $(document).ready(
     function() {
         mHeritageGoService.getPhotos()
@@ -47,3 +61,28 @@ $(document).ready(
             });
     }
 );
+
+$(window).scroll(() => {
+    $('.header-body').css({ 'opacity': '.75' });
+})
+
+$(function() {
+    var content = $('.main__post-layout'),
+        header = $('.container');
+
+    $(content).clone().prependTo(header).addClass('blurred');
+
+    $('.blurred').css({
+        'background': '#fff',
+        '-webkit-filter': 'blur(.1em)',
+        'filter': 'blur(.1em)',
+    });
+});
+
+$(document).scroll(function() {
+    var scroll = $(this).scrollTop();
+    $('.blurred').css({
+        '-webkit-transform': 'translateY(-' + scroll + 'px)',
+        'transform': 'translateY(-' + scroll + 'px)'
+    });
+})
