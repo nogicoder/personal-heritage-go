@@ -26,62 +26,44 @@ header {
     display: flex;
     position: sticky;
     top: 0;
-    background: white;
-    z-index: 99;
-    overflow: hidden;
-    &::after {
-        background: rgba(white, .5);
-        position: absolute;
-        display: block;
-        content: '';
-        top: 0;
-        z-index: 4;
-    }
 }
 
-.header__outer {
+.l-outer {
     flex: 1;
     align-items: center;
     display: flex;
     justify-content: flex-end;
 }
 
-.header__inner {
+.l-inner {
     width: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#header__inner__logo {
+.l-inner__name-area {
+    text-align: center;
+}
+
+#c-logo {
     width: 100px;
     height: auto;
     transition: all .1s ease-out;
 }
 
-#header__inner__logo:hover {
+#c-logo:hover {
     transform: scale(1.1);
 }
 
-#header__inner__name-area {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-#header__inner__name-area__left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#header__inner__name-area__left__primary {
+#c-primary {
     font-family: Arial;
     font-size: 18px;
     text-align: center;
+    font-weight: bold;
 }
 
-#header__inner__name-area__left__secondary {
+#c-secondary {
     font-family: Arial;
     font-size: 14px;
     text-align: center;
@@ -96,14 +78,14 @@ header {
     }
 }
 
-#header__inner__name-area__compass {
+#c-compass {
     font-size: 24px;
     text-align: center;
     margin-left: 6px;
     animation: rotate 0.3s infinite linear;
 }
 
-#header__outer__login {
+#c-login {
     font-family: Arial;
     font-size: 14px;
     text-align: center;
@@ -146,6 +128,8 @@ header {
     color: rgb(4, 91, 230);
 }
 
+
+/* 
 main {
     display: flex;
     align-content: stretch;
@@ -160,7 +144,6 @@ main {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    z-index: 1;
 }
 
 .main__post-layout__post {
@@ -296,4 +279,4 @@ img {
     opacity: 0.5;
     text-align: right;
     padding-right: 1em;
-}
+} */

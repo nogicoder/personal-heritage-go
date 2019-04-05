@@ -39,38 +39,35 @@
     <header>
 
         <!-- 1st Flex Box Item -->
-        <div class="header__outer"></div>
+        <div class="l-outer"></div>
 
         <!-- 2nd Flex Box Item -->
-        <div class="header__inner">
+        <div class="l-inner">
 
             <!-- The Logo -->
-            <img id="header__inner__logo" src="./assets/logo.png" alt="Heritage GO Logo" />
+            <img id="c-logo" src="./assets/logo.png" alt="Heritage GO Logo" />
 
             <!-- The Name Area -->
-            <div id="header__inner__name-area">
-                <div id="header__inner__name-area__left">
-                    <h1 id="header__inner__name-area__left__primary">Ho Chi Minh</h1>
-                    <h2 id="header__inner__name-area__left__secondary">Vietnam</h2>
-                </div>
-                <span class="far fa-compass" id="header__inner__name-area__compass"></span>
+            <div class="l-inner__name-area">
+                <span id="c-primary">Ho Chi Minh</span><i class="far fa-compass" id="c-compass"></i>
+                <h2 id="c-secondary">Vietnam</h2>
             </div>
         </div>
 
         <!-- 3rd Flex Box Item -->
-        <div class="header__outer">
+        <div class="l-outer">
 
             <!-- Button trigger modal -->
-            <button type="button" id="header__outer__login" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</button>
+            <button type="button" id="c-login" class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">Login</button>
 
             <!-- Bootstrap Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
 
                         <!-- The Modal Header with Title -->
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
+                            <h5 class="modal-title" id="LoginModalLabel">Log in</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
 
@@ -101,7 +98,7 @@
     </header>
 
     <!-- Main section -->
-    <main>
+    <!-- <main>
 
         <div class="main__post-layout">
 
@@ -164,7 +161,7 @@
 
         </div>
 
-    </main>
+    </main> -->
 
     <!-- Include jQuery scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
