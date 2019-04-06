@@ -11,7 +11,8 @@ function show() {
     }
 }
 
-let defaultContent = $(".main__post-layout__post");
+// Fetching photos
+let defaultContent = $("#js-post");
 
 // Fetching photos
 $(document).ready(
@@ -26,34 +27,34 @@ $(document).ready(
                     let content = defaultContent.clone();
                     photoInfo = mHeritageGoService.getPhoto(photo).then(photo => {
                             console.log(photo);
-                            content.find(".avatar-img").prop("src", "https:" + photo.account.picture_url).attr("alt", photo.account.fullname);
-                            content.find(".img-description").html(photo.title[0].content);
-                            content.find(".img-location").html(photo.area_name);
+                            content.find("#js-avatar").prop("src", "https:" + photo.account.picture_url).attr("alt", photo.account.fullname);
+                            content.find("#js-title").html(photo.title[0].content);
+                            content.find("#js-location").html(photo.area_name);
                             if (photo.capture_time) {
-                                content.find(".img-time").html(
+                                content.find("#js-time").html(
                                     photo.capture_time
                                 );
                             } else {
-                                content.find(".img-time").html(
+                                content.find("#js-time").html(
                                     "undefined"
                                 );
                             };
-                            content.find(".main-img").prop("src", "https:" + photo.image_url + "?size=large");
+                            content.find("#js-photo").prop("src", "https:" + photo.image_url + "?size=large");
                             if (photo.like_count) {
-                                content.find("#like").html(photo.like_count);
+                                content.find("#js-like").html(photo.like_count);
                             } else {
-                                content.find("#like").html("0");
+                                content.find("#js-like").html("0");
                             };
                             if (photo.comment_count) {
-                                content.find("#comment").html(photo.comment_count);
+                                content.find("#js-comment").html(photo.comment_count);
                             } else {
-                                content.find("#comment").html("0");
+                                content.find("#js-comment").html("0");
                             };
                         })
                         .catch(error => {
                             console.log(error)
                         });
-                    content.appendTo($(".main__post-layout"));
+                    content.appendTo($(".l-post"));
                 });
             })
             .catch(error => {
@@ -62,27 +63,27 @@ $(document).ready(
     }
 );
 
-$(window).scroll(() => {
-    $('.header-body').css({ 'opacity': '.75' });
-})
+// $(window).scroll(() => {
+//     $('.header-body').css({ 'opacity': '.75' });
+// })
 
-$(function() {
-    var content = $('.main__post-layout'),
-        header = $('.container');
+// $(function() {
+//     var content = $('.main__post-layout'),
+//         header = $('.container');
 
-    $(content).clone().prependTo(header).addClass('blurred');
+//     $(content).clone().prependTo(header).addClass('blurred');
 
-    $('.blurred').css({
-        'background': '#fff',
-        '-webkit-filter': 'blur(.1em)',
-        'filter': 'blur(.1em)',
-    });
-});
+//     $('.blurred').css({
+//         'background': '#fff',
+//         '-webkit-filter': 'blur(.1em)',
+//         'filter': 'blur(.1em)',
+//     });
+// });
 
-$(document).scroll(function() {
-    var scroll = $(this).scrollTop();
-    $('.blurred').css({
-        '-webkit-transform': 'translateY(-' + scroll + 'px)',
-        'transform': 'translateY(-' + scroll + 'px)'
-    });
-})
+// $(document).scroll(function() {
+//     var scroll = $(this).scrollTop();
+//     $('.blurred').css({
+//         '-webkit-transform': 'translateY(-' + scroll + 'px)',
+//         'transform': 'translateY(-' + scroll + 'px)'
+//     });
+// })
